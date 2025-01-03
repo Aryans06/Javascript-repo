@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ul id="images">
+            <div id="press">
+                <textarea rows="5" name="test-target" id="test-target"></textarea>
+                <button type="button" name="btn-reset" id="btn-reset">Reset</button>
+              </div>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: black;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+
+      
+    </div>
+
+</body>
+<script>
+    const textarea = document.getElementById("test-target");
+    const consoleLog = document.getElementById("console-log");
+   textarea.addEventListener("onkeypress",(e)=>{
+  console.log(`the key pressed was ${e.keydown}`)
+})
+
+
+    document.getElementById('japan').addEventListener('click',function(e){
+    // alert("japan was clicked")
+   //  console.log("japan was clicked")
+    // console.log(e.timeStamp)
+    
+    },false)
+
+    document.getElementById('images').addEventListener('click',function(e){
+     // console.log("Clicked inside ul")
+    },false)
+
+    document.getElementById('owl').addEventListener('click',function(e){
+       // console.log("Clicked the owl")
+       // e.stopPropagation() // stops the bubbling
+      },false)
+
+      document.querySelector('#images').addEventListener('click',function(e){
+       // console.log(e.target.tagName)
+        if(e.target.tagName==='IMG'){
+        //    let removeIt=e.target.parentNode
+         //   removeIt.remove()
+            
+        }
+        
+    },false)
+</script>
+</html>
